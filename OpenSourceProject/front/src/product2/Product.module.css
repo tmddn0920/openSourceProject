@@ -1,0 +1,799 @@
+/* Product.module.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Body {
+    font-family: 'Pretendard';
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0px;
+    width: 78%;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+.logoImage {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+.navbarContent {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 30px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 78%;
+    margin: 80px auto;
+    gap: 20px;
+}
+
+.mainContent {
+    display: flex;
+    justify-content: space-between;
+    flex: 4; 
+}
+
+.productInfo h1 {
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+    color: #2A2A2A;
+}
+
+.productInfo h2 {
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 38px;
+    color: #555555;
+}
+
+.productImageSection {
+    width: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; /* 화살표 버튼을 절대 위치로 배치하기 위해 필요 */
+}
+
+.productImage {
+    width: 650px;
+    height: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background: #E1E1E1;
+    border-radius: 60px;
+    padding: 2px;
+}
+
+.subImages {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+}
+
+.subImages img {
+    background: #E1E1E1;
+    border-radius: 10px;
+    padding: 2px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer; /* 서브 이미지를 클릭할 수 있게 커서 변경 */
+}
+
+.arrowButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    border: none;
+    font-size: 3rem;
+    cursor: pointer;
+    z-index: 1;
+    padding: 0.5rem;
+    pointer-events: auto;
+}
+
+.arrowButtonPrev {
+    left: 1rem; /* 이미지의 왼쪽 외부에 배치 */
+}
+
+.arrowButtonNext {
+    right: 1rem; /* 이미지의 오른쪽 외부에 배치 */
+}
+
+.reviewNewsSection {
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.reviewSection {
+    width: 100%;
+    background: #0674FC;
+    border-radius: 60px;
+    margin-bottom: 20px;
+    padding-top: 40px;
+}
+
+.rating h3 {
+    text-align: left;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 38px;
+    padding-left: 40px;
+    color: #FFFFFF;
+}
+
+.ratingContainer {
+    display: flex;
+    align-items: center;
+}
+
+.ratingScore {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0px auto 20px auto;
+}
+
+.ratingScore span{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 57px;
+    color: #FFFFFF;
+}
+
+#reviews {
+    padding-bottom: 30px;
+}
+
+.review {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.83);
+}
+
+.safetySection {
+    padding-top: 40px;
+    background: radial-gradient(235.68% 390.67% at 49.64% 0%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%);
+    filter: drop-shadow(0px 0px 15px rgba(87, 87, 87, 0.25));
+    backdrop-filter: blur(10px);
+    margin-top: 30px;
+    width: 100%;
+    border-radius: 60px;
+    border: 3px solid rgba(255, 255, 255, 0.83);
+}
+
+.safetySectionName {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.question {
+    width: 28px;
+    height: 28px;
+}
+
+.safetyRating {
+    text-align: left;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 38px;
+    padding-left: 40px;
+    color: #FFFFFF;
+}
+
+.safetyRatingResult {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 48px;
+    color: #FFFFFF;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    padding: 25px;
+}
+
+.safetyRatingExplanation {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #F5F7FA;
+    padding-bottom: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.relatedNews {
+    width: 100%;
+    background-color: #fff;
+    padding: 30px;
+    padding-bottom: 10px;
+    border-radius: 60px;
+    border: 3px solid #E1E1E1;
+    text-align: left;
+}
+
+.relatedNews h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.newsList {
+    list-style: none;
+}
+
+.newsItem {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* 링크의 기본 밑줄을 제거 */
+    color: #333;
+    margin-bottom: 10px; /* 각 뉴스 항목 사이의 간격 */
+    transition: background-color 0.3s ease;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.newsItem:hover {
+    background-color: #f0f0f0; /* 마우스를 올릴 때 배경색 변경 */
+}
+
+.newsImage {
+    width: 80px;
+    height: 80px;
+    margin-right: 15px;
+    border-radius: 10px;
+    object-fit: cover; /* 이미지가 영역을 잘 채우도록 설정 */
+}
+
+.newsTitle {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    color: #2A2A2A;
+    display: block; /* 제목이 이미지 옆에 오도록 블록 요소로 설정 */
+}
+
+.newsDescription {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 25px;
+    color: #000000;
+}
+
+.newsSource {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 17px;
+    color: #A8A8A8;
+}
+
+.productInfoSection {
+    width: 78%;
+    margin: 0 auto;
+}
+
+.productInfoSection h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 38px;
+    margin-bottom: 20px;
+    color: #2A2A2A;
+    text-align: left;
+}
+
+.productInfoTable {
+    border-bottom: 1px solid #2A2A2A;
+    margin-bottom: 30px; /* 각 표 사이의 간격 설정 */
+}
+
+.productInfoGrid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 2fr; /* 각 셀의 너비를 지정 */
+    background-color: #333;
+}
+
+.productInfoRow {
+    display: contents;
+}
+
+.productInfoCell {
+    text-align: left;
+    vertical-align: middle;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 29px;
+}
+
+.productInfoCellHeader {
+    background-color: #DADADA;
+    color: #555555;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-top: 1px solid #2A2A2A;
+}
+
+.productInfoCellContent {
+    background-color: #f5f5f5;
+    color: #555555;
+    text-align: left;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-top: 1px solid #2A2A2A;
+}
+
+.productInfoGrid .productInfoCell {
+    padding: 5px;
+    padding-left: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.productInfoGrid .productInfoCell:lastChild {
+    border-right: none;
+}
+
+.fullWidth {
+    grid-column: span 3; /* 3개의 열을 합쳐서 하나의 셀이 되도록 설정 */
+    border-right: none;
+}
+
+.disclaimer {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 29px;
+    color: #0674FC;
+    margin-top: 5px;
+    text-align: left;
+}
+
+.siteInformation {
+    text-align: center;
+    width: 100%;
+    margin-top: 120px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #D9D9D9;
+}
+
+.siteInformationText {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.reviewContainer {
+    width: 78%;
+    margin: 0 auto;
+    background-color: #f5f5f5;
+    margin-top: 80px;
+}
+
+.reviewContainerNameBox {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.question {
+    width: 28px;
+    height: 28px;
+
+}
+
+.reviewContainerName {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 38px;
+    color: #2A2A2A;
+    text-align: left;
+}
+
+.reviewSummaryBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 40px;
+    background: #FFFFFF;
+    border: 2px solid #DADADA;
+    border-radius: 50px;
+}
+
+.reviewInfo {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* 자식 요소들을 공간을 나눠 배치합니다 */
+    width: 100%; /* 전체 너비를 사용합니다 */
+}
+
+.reviewInfo .rating {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rating h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 29px;
+    text-align: center;
+    color: #2A2A2A;
+    padding-bottom: 40px;
+}
+
+.rating h2 {
+    padding-top: 10px;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: #2A2A2A;
+}
+
+.averageRating {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: #A8A8A8;
+}
+
+.reviewInfo .reviewCount {
+    flex-grow: 1;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.reviewCountInfo {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 29px;
+    color: #2A2A2A;
+}
+
+.reviewIcon {
+    margin: 20px auto;
+}
+
+.reviewCountNumber {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 29px;
+    color: #2A2A2A;
+}
+
+.reviewInfo .keywordsSummary {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+.keywordsSummaryTitle {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 29px;
+    color: #2A2A2A;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.keywords {
+    text-align: center;
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 38px;
+    color: #0674FC;
+}
+
+.filterSortSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #DADADA;
+}
+
+.sortOptions select {
+    font-size: 20px;
+    padding: 4px;
+    background-color: #f5f5f5;
+    border: 1px solid rgba(0, 0, 0, 0);
+    cursor: pointer;
+}
+
+.keywordsFilter {
+    display: flex;
+    gap: 40px;
+}
+
+.keywordButton {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 29px;
+    color: #555555;
+    border: none;
+    padding: 10px 30px;
+    background-color: #f5f5f5;
+    border: 2px solid #A8A8A8;
+    border-radius: 100px;    
+    cursor: pointer;
+}
+
+.keywordButton.selected {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 29px;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 30px;
+    background-color: #0674FC;
+    border: 2px solid #0674FC;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.reviewList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.reviewCard {
+    background: #FFFFFF;
+    border: 2px solid #DADADA;
+    border-radius: 22px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.reviewimage {
+    object-fit: contain;
+    background-color: #E1E1E1;
+    width: 100%;
+    height: 14vw;
+    border-radius: 8px;
+}
+
+.reviewRatingContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1vw;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1vw;
+    line-height: 29px;
+    color: #2A2A2A;
+}
+
+.reviewText {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.9vw;
+    line-height: 20px;
+    color: #2A2A2A;
+    max-height: 80px; /* 4줄에 해당하는 높이로 설정 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.reviewEvaluation {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 0.9vw;
+    line-height: 20px;
+    color: #2A2A2A;
+}
+
+.readMore {
+    color: #0674FC;
+    cursor: pointer;
+    text-align: left;
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+
+.reviewText.expanded {
+    max-height: none;
+    overflow: auto;
+}
+
+.reviewRating {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1vw;
+    line-height: 29px;
+    color: #0674FC;
+}
+
+.reviewInfoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+}
+
+.reviewText {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.9vw;
+    line-height: 25px;
+    color: #2A2A2A;
+}
+
+.reviewSource {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.9vw;
+    line-height: 20px;
+    color: #A8A8A8;
+}
+
+.pagination {
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pageNumber,
+.reviewArrowButton {
+    background-color: #f5f5f5;
+    color: #A8A8A8;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.pageNumber.active {
+    color: #2A2A2A;
+    font-weight: 900;
+}
+
+.reviewArrowButton {
+    padding: 10px 20px;
+    color: #2A2A2A;
+}
+
+.reviewArrowButton:disabled {
+    background-color: #f5f5f5;
+    color: #A8A8A8;
+    cursor: not-allowed;
+}
+
+.tooltipContainer {
+    position: relative;
+    display: inline-block;
+    margin: auto 0px;
+    padding-top: 4px;
+}
+
+.tooltipText {
+    visibility: hidden;
+    width: 350px;
+    background-color: #F5F7FA;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    color: #555555;
+    text-align: left;
+    border-radius: 10px;
+    padding: 5px 10px;
+    position: absolute;
+    z-index: 1;
+    top: 130%;  /* 아래로 조정 */
+    left: 50%;
+    margin-left: -175px; /* 툴팁 박스 너비의 절반을 빼서 중앙에 위치 */
+    opacity: 0;
+    transition: visibility 0.2s, opacity 0.2s ease-in-out;
+  }
+  
+.tooltipContainer:hover .tooltipText {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltipText2 {
+    visibility: hidden;
+    width: 350px;
+    background-color: #0674FC;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: #FFFFFF;
+    text-align: left;
+    border-radius: 10px;
+    padding: 5px 10px;
+    position: absolute;
+    z-index: 1;
+    top: 130%;  /* 아래로 조정 */
+    left: 50%;
+    margin-left: -175px; /* 툴팁 박스 너비의 절반을 빼서 중앙에 위치 */
+    opacity: 0;
+    transition: visibility 0.2s, opacity 0.2s ease-in-out;
+  }
+  
+.tooltipContainer:hover .tooltipText2 {
+    visibility: visible;
+    opacity: 1;
+}
+
+.sourceSection {
+    display : flex;
+    justify-content: space-between;
+}
+
+.reviewbookmark {
+    width: 0.9vw;
+    height: 1.26vw;
+}
